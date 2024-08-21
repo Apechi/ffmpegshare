@@ -107,6 +107,7 @@
             android:layout_marginTop="16dp"
             android:padding="16dp"
             android:text="@string/select_file_button"
+            android:textColor="@color/white"
             android:textSize="18sp"
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"

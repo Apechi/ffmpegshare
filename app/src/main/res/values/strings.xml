@@ -33,7 +33,7 @@
     <string name="flavor" tools:ignore="MissingTranslation">Flavor: %s</string>
 
 
-    <string name="app_description">Easily compress videos and images with FFmpeg.</string>
+    <string name="app_description">Easily compress videos, images and audio files with FFmpeg.</string>
     <string name="introduction_line_0">App Created by caydey <a href="https://github.com/caydey/Prime Compressor">github</a></string>
     <string name="introduction_line_1">Functionality (and code) inspired by Scrambled-Exif by juanitobananas <a href="https://gitlab.com/juanitobananas/scrambled-exif">gitlab</a></string>
     <string name="introduction_line_2">FFmpeg library used is ffmpeg-kit by arthenica <a href="https://github.com/arthenica/ffmpeg-kit">github</a></string>
