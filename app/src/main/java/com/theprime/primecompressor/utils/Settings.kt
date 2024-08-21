@@ -110,7 +110,7 @@ class Settings(private val context: Context) {
 
     var videoCodec: VideoCodecOpts
         get() {
-            val videoCodecString = preferences.getString(VIDEO_CODEC, VideoCodecOpts.DEFAULT.name)!!
+            val videoCodecString = preferences.getString(VIDEO_CODEC, VideoCodecOpts.H265.name)!!
             return VideoCodecOpts.valueOf(videoCodecString) // convert string to enum
         }
         set(value) = setPreference(VIDEO_CODEC, value.toString())

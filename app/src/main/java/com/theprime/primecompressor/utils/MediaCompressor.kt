@@ -57,7 +57,8 @@ class MediaCompressor(private val context: Context) {
         btnCancel.setOnClickListener {
             Toast.makeText(context, context.getString(R.string.ffmpeg_canceled), Toast.LENGTH_LONG).show()
             cancelAllOperations()
-            failureHandler() // a cancel is considered a failure
+            failureHandler()
+            activity.finish()// a cancel is considered a failure
         }
 
         val mediaType = utils.getMediaType(inputFileUri)

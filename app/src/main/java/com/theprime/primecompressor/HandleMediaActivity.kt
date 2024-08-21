@@ -80,8 +80,8 @@ class HandleMediaActivity : AppCompatActivity() {
             mediaCompressor.compressFiles(this, receivedMedia) { compressedMedia ->
                 if (compressedMedia.isNotEmpty()) {
                     shareMedia(compressedMedia)
+                    AdsHelper.showInterstitialPrime(this, AdsConfig.Interstitial_ID, AdsConfig.Interval)
                 }
-                AdsHelper.showInterstitialPrime(this, AdsConfig.Interstitial_ID, AdsConfig.Interval)
             }
         }
     }

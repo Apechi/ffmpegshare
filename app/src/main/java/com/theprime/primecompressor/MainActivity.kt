@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
+
+
         val versionName = App.versionName
         findViewById<TextView>(R.id.lblVersion).text = getString(R.string.version, versionName)
 
@@ -63,6 +65,14 @@ class MainActivity : AppCompatActivity() {
         AdsHelper.showBannerPrime(this, binding.layads, AdsConfig.Banner_ID)
 
 
+        buttonController(binding)
+
+    }
+
+    private fun buttonController(binding: ActivityMainBinding) {
+        binding.aboutButton.setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

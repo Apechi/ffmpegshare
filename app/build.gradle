@@ -11,7 +11,7 @@ android {
         minSdk 26
         targetSdk 35
         versionCode 21
-        versionName "1.3.2"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -109,6 +109,7 @@ dependencies {
     implementation 'androidx.exifinterface:exifinterface:1.3.7'
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'androidx.activity:activity-ktx:1.9.1'
+    implementation 'androidx.activity:activity:1.9.1'
 
     // import ffmpeg-kit-full if building with audioSupport
     // else import ffmpeg-kit-min
