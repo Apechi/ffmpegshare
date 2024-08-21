@@ -230,7 +230,7 @@
                 android:layout_height="61dp"
                 android:layout_marginTop="24dp"
                 android:text="@string/cancel_ffmpeg"
-
+                android:textColor="@color/white"
 
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
