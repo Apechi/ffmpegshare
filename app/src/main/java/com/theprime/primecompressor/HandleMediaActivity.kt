@@ -2,11 +2,14 @@ package com.theprime.primecompressor
 
 import android.app.AlarmManager
 import android.app.PendingIntent
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.os.SystemClock
+import android.provider.MediaStore
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +19,8 @@ import com.theprime.primecompressor.utils.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_S
 import com.theprime.primecompressor.utils.MediaCompressor
 import com.theprime.primecompressor.utils.Utils
 import timber.log.Timber
+import java.io.File
+import java.io.FileOutputStream
 
 
 class HandleMediaActivity : AppCompatActivity() {
@@ -80,11 +85,44 @@ class HandleMediaActivity : AppCompatActivity() {
             mediaCompressor.compressFiles(this, receivedMedia) { compressedMedia ->
                 if (compressedMedia.isNotEmpty()) {
                     shareMedia(compressedMedia)
+                    saveCompressedFiles(compressedMedia)
                     AdsHelper.showInterstitialPrime(this, AdsConfig.Interstitial_ID, AdsConfig.Interval)
                 }
             }
         }
     }
+
+    private fun saveCompressedFiles(mediaUris: ArrayList<Uri>) {
+        mediaUris.forEach { uri ->
+            val newFileName = "${uri.lastPathSegment?.substringBeforeLast(".")}_compressed.${uri.lastPathSegment?.substringAfterLast(".")}"
+
+            // Create a ContentValues object to insert the new file into MediaStore
+            val values = ContentValues().apply {
+                put(MediaStore.Images.Media.DISPLAY_NAME, newFileName)
+                put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_DCIM + "/CompressedPrime") // Specify your folder name
+            }
+
+            // Insert the new file into MediaStore
+            val uriOutput = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+
+            uriOutput?.let { outputUri ->
+                try {
+                    contentResolver.openInputStream(uri)?.use { inputStream ->
+                        contentResolver.openOutputStream(outputUri)?.use { outputStream ->
+                            inputStream.copyTo(outputStream) // Save the compressed file
+                        }
+                    }
+                    Toast.makeText(this, "File saved!: $outputUri", Toast.LENGTH_LONG).show()
+                } catch (e: Exception) {
+                    Timber.e("Error saving compressed file: ${e.message}")
+                    Toast.makeText(this, "Error saving file: ${e.message}", Toast.LENGTH_LONG).show()
+                }
+            } ?: run {
+                Toast.makeText(this, "Failed to create output file", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
 
     private fun shareMedia(mediaUris: ArrayList<Uri>) {
         val shareIntent = Intent()

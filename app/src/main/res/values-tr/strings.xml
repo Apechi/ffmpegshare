@@ -25,7 +25,7 @@
     <string name="version">Sürüm: %s</string>
 
 
-    <string name="app_description">Görüntüleri ve videoları paylaşmadan önce ffmpeg aracılığıyla sıkıştırın</string>
+    <string name="app_description">FFmpeg ile videoları ve resimleri kolayca sıkıştırın.</string>
     <string name="introduction_line_0">Uygulamayı oluşturan: caydey<a href="https://github.com/caydey/Prime Compressor">github</a></string>
     <string name="introduction_line_1">Juanitobananas tarafından Scrambled-Exif\'ten ilham alan işlevsellik (ve kod) <a href="https://gitlab.com/juanitobananas/scrambled-exif">gitlab</a></string>
     <string name="introduction_line_2">Kullanılan FFmpeg kütüphanesi arthenica tarafından hazırlanan ffmpeg-kit\'tir. <a href="https://github.com/arthenica/ffmpeg-kit">github</a></string>

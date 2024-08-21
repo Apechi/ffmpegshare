@@ -25,7 +25,7 @@
     <string name="version">Versión: %s</string>
 
 
-    <string name="app_description">Comprimir imaxes e vídeos con ffmpeg antes de compartirlos</string>
+    <string name="app_description">Comprime facilmente vídeos e imaxes con FFmpeg.</string>
     <string name="introduction_line_0">App Creada por caydey <a href="https://github.com/caydey/Prime Compressor">github</a></string>
     <string name="introduction_line_1">Funcións (e código) inspiradas por Scrambled-Exif de juanitobananas <a href="https://gitlab.com/juanitobananas/scrambled-exif">gitlab</a></string>
     <string name="introduction_line_2">Biblioteca Ffmpeg utilizada ffmpeg-kit por arthenica <a href="https://github.com/arthenica/ffmpeg-kit">github</a></string>
