@@ -11,12 +11,16 @@ import com.adsmedia.adsmodul.AdsHelper
 import com.adsmedia.adsmodul.OpenAds
 import com.adsmedia.adsmodul.utils.AdsConfig
 import com.theprime.primecompressor.configs.AdsData
+import com.theprime.primecompressor.utils.Settings
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash)
+
+
+
         if (BuildConfig.DEBUG) {
             AdsHelper.debugModePrime(true)
         }

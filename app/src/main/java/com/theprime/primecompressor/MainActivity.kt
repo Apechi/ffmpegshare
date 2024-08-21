@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.adsmedia.adsmodul.AdsHelper
 import com.adsmedia.adsmodul.utils.AdsConfig
 import com.theprime.primecompressor.databinding.ActivityMainBinding
+import com.theprime.primecompressor.utils.Settings
 import com.theprime.primecompressor.utils.Utils
 
 
@@ -66,6 +67,12 @@ class MainActivity : AppCompatActivity() {
 
 
         buttonController(binding)
+
+
+        //hacky way to fix video compressing crash
+        val settings = Settings(this)
+        settings.videoCodec = Settings.VideoCodecOpts.H264 // Example of setting video codec to H264
+        settings.audioCodec = Settings.AudioCodecOpts.AAC
 
     }
 
