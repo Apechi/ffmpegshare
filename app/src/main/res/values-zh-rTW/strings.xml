@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">FFShare</string>
+    <string name="app_name">Prime Compressor</string>
     <string name="menu_item_settings">設定</string>
     <string name="menu_item_logs">日誌</string>
     <string name="menu_item_delete_logs">刪除所有日誌</string>
@@ -27,7 +27,7 @@
     <string name="flavor" tools:ignore="MissingTranslation">風味：%s</string>
 
     <string name="app_description">在分享前透過 ffmpeg 壓縮圖片和影片</string>
-    <string name="introduction_line_0">應用程式由 caydey 建立 <a href="https://github.com/caydey/ffshare">github</a>
+    <string name="introduction_line_0">應用程式由 caydey 建立 <a href="https://github.com/caydey/Prime Compressor">github</a>
     </string>
     <string name="introduction_line_1">功能（和程式碼）靈感來自 juanitobananas 的 Scrambled-Exif <a href="https://gitlab.com/juanitobananas/scrambled-exif">gitlab</a>
     </string>

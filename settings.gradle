@@ -2,6 +2,15 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
+        maven {
+            //jitpack
+            url "https://jitpack.io"
+        }
+        maven {
+            //pangle url
+            url "https://artifact.bytedance.com/repository/pangle"
+        }
+
         mavenCentral()
     }
 }
@@ -10,6 +19,14 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            //jitpack
+            url "https://jitpack.io"
+        }
+        maven {
+            //pangle url
+            url "https://artifact.bytedance.com/repository/pangle"
+        }
     }
 }
 rootProject.name = "FFShare"

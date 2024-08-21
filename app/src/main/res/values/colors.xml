@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="teal">#00614E</color>
-    <color name="teal_darker">#004B3C</color>
-    <color name="cyan">#00FFFF</color>
+    <color name="primary_blue">#005A8C</color>
+    <color name="primary_blue_dark">#004B73</color>
+    <color name="accent_cyan">#00CCFF</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="failed">#F08080</color>
+    <color name="failed">#7B68EE</color>
 
-    <color name="light_grey">#DCDCDC</color>
-    <color name="dark_grey">#696969</color>
+    <color name="light_blue_grey">#E6F3FF</color>
+    <color name="dark_blue_grey">#4A6572</color>
 </resources>

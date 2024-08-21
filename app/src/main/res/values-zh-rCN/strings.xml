@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FFShare</string>
+    <string name="app_name">Prime Compressor</string>
     <string name="menu_item_settings">设置</string>
     <string name="menu_item_logs">日志</string>
     <string name="menu_item_delete_logs">删除所有日志</string>
@@ -26,7 +26,7 @@
 
 
     <string name="app_description">在分享图片和视频之前通过FFmpeg压缩它们</string>
-    <string name="introduction_line_0">此应用由caydey制作：<a href="https://github.com/caydey/ffshare">GitHub</a></string>
+    <string name="introduction_line_0">此应用由caydey制作：<a href="https://github.com/caydey/Prime Compressor">GitHub</a></string>
     <string name="introduction_line_1">功能（和代码）受juanitobananas的Scrambled Exif启发：<a href="https://gitlab.com/juanitobananas/scrambled-exif">GitLab</a></string>
     <string name="introduction_line_2">使用的FFmpeg库为ARTHENICA的FFmpegKit：<a href="https://github.com/arthenica/ffmpeg-kit">GitHub</a></string>
 
